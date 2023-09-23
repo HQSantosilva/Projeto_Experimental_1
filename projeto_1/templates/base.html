@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Meu Site{% endblock %}</title>
+</head>
+<body>
+    <ul>
+        <li><a href="{{ url_for('home') }}">Página Inicial</a></li>
+        <li><a href="{{ url_for('cadastro') }}">Cadastro</a></li>
+        <li><a href="{{ url_for('usuario') }}">Conta</a></li>
+        <li><a href="{{ url_for('vagas') }}">Vagas</a></li>
+    </ul>
+    <div id="conteudo">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
